@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>实现三栏布局的7种方式</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .left {
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .right {
+            width: 200px;
+            background-color: burlywood;
+        }
+
+        .main {
+            background-color: chartreuse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <style>
+        .container {
+            display: table;
+            width: 100%;
+        }
+
+        .container>div {
+            display: table-cell;
+            /*background-color: blue;
+            opacity: 0.1;*/
+        }
+    </style>
+    <!-- 4. 表格布局
+优点：兼容性很好，当内容溢出时会自动撑开父元素
+缺点：seo不友好 -->
+    <div class="container">
+        <div class="left">Left</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+    </div>
+</body>
+
+</html>
