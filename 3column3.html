@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>实现三栏布局的7种方式</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .left {
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .right {
+            width: 200px;
+            background-color: burlywood;
+        }
+
+        .main {
+            background-color: chartreuse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .main {
+            flex: 1;
+            /* flex: 1 1 auto; */
+        }
+    </style>
+    <!-- 3. flexbox
+优点：简单实用，未来的趋势
+缺点：需要考虑浏览器的兼容性 -->
+    <div class="container">
+        <div class="left">Left</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+    </div>
+</body>
+
+</html>
