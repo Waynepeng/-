@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <title>第8天 设计稿实现HTML页面及CSS样式</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link {
+            color: #ffffff;
+        }
+
+        a:visited {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        a:active {
+            color: #ffffff;
+        }
+
+        .headbg {
+            height: 80px;
+            background-color: #333333;
+        }
+
+        .headcon {
+            height: 80px;
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            color：#ffffff;
+        }
+
+        .headcon p {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .headcon ul {
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .headcon li {
+            display: block;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .headcon a {
+            display: block;
+            color: #fff;
+            text-decoration: underline;
+            padding: 0 20px;
+        }
+
+        .headcon a:hover {
+            background-color: #060;
+        }
+
+        .userregister {
+            float: right;
+            margin-top: -16px;
+        }
+
+        .bannerbg {
+            float: left;
+            height: 300px;
+            width: 100%;
+            background-color: #66bb33;
+        }
+
+        .bannercon {
+            position: relative;
+            height: 80px;
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 220px;
+            color：#ffffff;
+        }
+
+
+        .banpagebg {
+            width: 170px;
+            height: 50px;
+            float: right;
+            margin-top: 30px;
+        }
+
+        .banpage {
+            height: 34px;
+            width: 28px;
+            background-color: #b2dd99;
+            border: 1px solid #335e1a;
+            text-align: center;
+            line-height: 34px;
+            float: right;
+        }
+
+        .banpage2 {
+            height: 49px;
+            width: 29px;
+            background-color: #e0f1d6;
+            border: 1px solid #14250a;
+            text-align: center;
+            line-height: 64px;
+            margin-top: -15px;
+        }
+
+        .bannerbg li {
+            display: block;
+            float: left;
+
+            margin-left: 10px;
+        }
+
+        #breadnav {
+            float: left;
+            height: 70px;
+            width: 100%;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 10px;
+        }
+
+        .breadnavcen {
+            margin-left: auto;
+            margin-right: auto;
+            height: 70px;
+            width: 960px;
+        }
+
+        .crumbs {
+            display: block;
+
+        }
+
+        .crumbs li {
+            display: inline;
+            width: 117px;
+            margin-left: 0px;
+            margin-top: 37px;
+            float: left;
+
+        }
+
+        .crumbs li.first {
+            padding-left: 0px;
+            margin-left: 10px;
+        }
+
+        .crumbs li a,
+        .crumbs li a:link,
+        .crumbs li a:visited {
+            color: #666;
+            display: block;
+            font-size: 12px;
+            margin-left: 0px;
+            padding: 7px 17px 11px 15px;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .crumbs li a {
+            background-image: url(pic.jpg);
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            position: relative;
+        }
+
+        .crumbs li a:hover {
+            color: #333;
+            background-position: 100% -48px;
+            cursor: pointer;
+        }
+
+        .crumbs li a:active {
+            color: #333;
+            background-position: 100% -96px;
+        }
+
+        .crumbs li.first a span {
+            height: 29px;
+            width: 3px;
+            border-left: 0px solid #d9d9d9;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .contentline1 {
+            display: flex;
+            width: 960px;
+            height: 120px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222222;
+        }
+
+        .contentlineleft {
+            float: left;
+            height: 14px;
+            width: 206px;
+            border: 1px solid #cccccc;
+            margin-left: 10px;
+            padding: 51px;
+        }
+
+        .contentline2a {
+            height: 14px;
+            width: 126px;
+            border: 1px solid #cccccc;
+            margin-left: 10px;
+            padding: 51px;
+
+        }
+
+        .contentline3 {
+            height: 14px;
+            width: 164px;
+            border: 1px solid #cccccc;
+            margin-left: 10px;
+            padding: 51px;
+        }
+
+        .contentline3b {
+            height: 14px;
+            width: 228px;
+            border: 1px solid #cccccc;
+            margin-left: 10px;
+            padding: 51px;
+        }
+
+        .contentline3c {
+            height: 14px;
+            width: 235px;
+            border: 1px solid #cccccc;
+            margin-left: 10px;
+            padding: 51px;
+        }
+
+        .footerbg {
+            height: 120px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #666666;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headbg">
+        <div class="headcon">
+            <ul>
+                <li>
+                    <p>Logo</p>
+                </li>
+            </ul>
+            <ul class="userregister">
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bannerbg">
+        <div class="bannercon">
+            <ul class="banpagebg">
+                <li class="banpage">
+                    1
+                </li>
+                <li class="banpage2">
+                    2
+                </li>
+                <li class="banpage">
+                    3
+                </li>
+                <li class="banpage">
+                    4
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="breadnav">
+        <div class="breadnavcen">
+            <ul class="crumbs">
+                <li class="first"><a href="#" style="z-index:10;"><span></span>HOME</a></li>
+                <li><a href="#" style="z-index:8;">PROFILE</a></li>
+                <li><a href="#" style="z-index:7;">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contentline1">
+        <div class="contentlineleft">
+            This is Content1
+        </div>
+        <div class="contentlineleft">
+            MaybeContent2
+        </div>
+        <div class="contentlineleft">
+            Content3
+        </div>
+    </div>
+
+    <div class="contentline1">
+        <div class="contentline2a">
+            Content4
+        </div>
+        <div class="contentline2a">
+            Content5
+        </div>
+        <div class="contentline2a">
+            Content6
+        </div>
+        <div class="contentline2a">
+            Content7
+        </div>
+    </div>
+
+    <div class="contentline1">
+        <div class="contentline3">
+            Content8
+        </div>
+        <div class="contentline3b">
+            Content9
+        </div>
+        <div class="contentline3c">
+            Content10
+        </div>
+    </div>
+    <div class="footerbg">
+        ©2018 ife.baidu.com
+    </div>
+</body>
+
+</html>
